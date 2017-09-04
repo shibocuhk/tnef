@@ -9,7 +9,7 @@ module Tnef
 
   def self.unpack(winmail_io, &block)
     in_tmp_dir do |dir|
-      temp_file = Tempfile.new('winmail')
+      temp_file = Tempfile.new('winmail', mode: File::RDWR | File::BINARY)
       temp_file.write(winmail_io.read)
       temp_file.close
       begin
