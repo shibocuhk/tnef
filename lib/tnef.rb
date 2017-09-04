@@ -4,7 +4,6 @@ require "tnef/executable"
 require "tmpdir"
 require "fileutils"
 require 'tempfile'
-require 'pry'
 module Tnef
 
   def self.unpack(winmail_io, &block)
