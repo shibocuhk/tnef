@@ -308,7 +308,9 @@ get_rtf_data_from_buf (size_t len, unsigned char *data,
     uint32 magic;
     uint32 checksum;
     size_t idx = 0;
-    
+
+    assert(len > 16);
+
     compr_size = GETINT32(data + idx); idx += 4;
     uncompr_size = GETINT32(data + idx); idx += 4;
     magic = GETINT32(data + idx); idx += 4;
@@ -348,7 +350,7 @@ get_rtf_data (MAPI_Attr *a)
     int j;
     for (j = 0; j < a->num_values; j++)
     {
-	if (is_rtf_data (a->values[j].data.buf))
+	if (a->values[j].len > 12 && is_rtf_data (a->values[j].data.buf))
 	{
 	    body[j] = (VarLenData*)XMALLOC(VarLenData, 1);
 

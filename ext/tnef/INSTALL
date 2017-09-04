@@ -10,9 +10,9 @@ unlimited permission to copy, distribute and modify it.
 Basic Installation
 ==================
 
-Briefly, the shell commands `./configure; make; make install' should
-configure, build, and install this package.  The following
-more-detailed instructions are generic; see the `README' file for
+Briefly, the shell commands `autoreconf; ./configure; make; make install'
+should configure, build, and install this package.  The following
+more-detailed instructions are generic; see the `README.md' file for
 instructions specific to this package.
 
    The `configure' shell script attempts to guess correct values for
@@ -32,7 +32,7 @@ cache files.
 
    If you need to do unusual things to compile the package, please try
 to figure out how `configure' could check whether to do them, and mail
-diffs or instructions to the address given in the `README' so they can
+diffs or instructions to the address given in the `README.md' so they can
 be considered for the next release.  If you are using the cache, and at
 some point `config.cache' contains results you don't want to keep, you
 may remove or edit it.
@@ -45,7 +45,9 @@ of `autoconf'.
 The simplest way to compile this package is:
 
   1. `cd' to the directory containing the package's source code and type
-     `./configure' to configure the package for your system.
+     `autoreconf' to generate a new configure script.
+
+  1. Type `./configure' to configure the package for your system.
 
      Running `configure' might take a while.  While running, it prints
      some messages telling which features it is checking for.
@@ -127,7 +129,7 @@ Some packages pay attention to `--enable-FEATURE' options to
 `configure', where FEATURE indicates an optional part of the package.
 They may also pay attention to `--with-PACKAGE' options, where PACKAGE
 is something like `gnu-as' or `x' (for the X Window System).  The
-`README' should mention any `--enable-' and `--with-' options that the
+`README.md' should mention any `--enable-' and `--with-' options that the
 package recognizes.
 
    For packages that use the X Window System, `configure' can usually
@@ -231,4 +233,3 @@ an Autoconf bug.  Until the bug is fixed you can use this workaround:
 
 `configure' also accepts some other, not widely useful, options.  Run
 `configure --help' for more details.
-

@@ -1,5 +1,32 @@
-TNEF NEWS -- history of user-visible changes.   18 April 2011
-Copyright (C) 2000-2011 by Mark Simpson
+TNEF NEWS -- history of user-visible changes.   31 August 2014
+Copyright (C) 2000-2017 by Mark Simpson
+
+* 1.4.15 [28 May 2017]
+** Fix underflow problem
+*** https://github.com/verdammelt/tnef/issues/23
+
+* 1.4.14 [19 March 2017]
+** Use __builtin_mul_overflow when available.
+** Fixing Unicode related bugs introduced in previous release.
+*** https://github.com/verdammelt/tnef/issues/20
+
+* 1.4.13 [23 February 2017]
+** Fixing security issues reported by Eric Sesterhenn and Hanno Böck
+
+* 1.4.12 [31 August 2014]
+** Fixing bug in distribution tarball.
+*** https://github.com/verdammelt/tnef/issues/9
+** Fixing autoconf warnings
+*** https://github.com/verdammelt/tnef/issues/4
+*** https://github.com/verdammelt/tnef/pull/10
+** Fixing compilation warning on Fedora
+*** https://github.com/verdammelt/tnef/pull/8
+
+* 1.4.11 [12 July 2014]
+** Fixing bug when parsing files with multiple value MAPI attributes
+*** https://github.com/verdammelt/tnef/issues/3
+** Fixing compilation warnings
+*** https://github.com/verdammelt/tnef/issues/5
 
 * 1.4.10 [4 November 2013]
 ** Incorporating documentation patch from bentley (github)
